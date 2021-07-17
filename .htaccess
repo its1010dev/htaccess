@@ -1,0 +1,8 @@
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+ErrorDocument 403 Error
+ErrorDocument 404 Error
+ErrorDocument 500 Error
